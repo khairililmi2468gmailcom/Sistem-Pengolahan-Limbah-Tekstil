@@ -81,11 +81,14 @@
                                                             <input type="hidden" name="id_barang"
                                                                 value="{{ $barang->id }}">
                                                             @if ($saldo_koin >= $barang->harga)
-                                                                <button data-modal-toggle="tukar" type="button"
+                                                                <button type="submit" data-modal-target="yakin"
+                                                                    data-modal-hide="tukar" data-modal-toggle="yakin"
+                                                                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Yes
+                                                                    {{ $barang->harga }} koin</button>
+                                                                {{-- <button data-modal-toggle="tukar" type="button"
                                                                     data-modal-hide="back" id="back"
                                                                     class="text-white bg-green-400 hover:bg-green-300 focus:ring-4 focus:outline-none focus:ring-green-300 rounded-lg border border-green-300 text-sm font-medium px-5 py-2.5 hover:text-green-900 focus:z-10 dark:bg-green-700 dark:text-green-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
-                                                                    Tukar </button>
-
+                                                                    Tukar </button> --}}
                                                                 <!-- modal tukar 1 -->
                                                                 <div id="tukar" tabindex="-1"
                                                                     class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -122,8 +125,8 @@
                                                                                     Apakah Anda Yakin Menukarkan Poin Ini?
                                                                                 </h3>
                                                                                 <button type="submit"
-                                                                                    data-modal-target="target"
-                                                                                    data-modal-hide="target"
+                                                                                    data-modal-target="yakin"
+                                                                                    data-modal-hide="tukar"
                                                                                     data-modal-toggle="yakin"
                                                                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Yes
                                                                                     {{ $barang->harga }} koin</button>

@@ -97,6 +97,9 @@
                         </span>
                         <span class="title">Tambah Barang</span>
 
+
+                </li>
+                <li>
                     <a href="{{ route('konfir-kirim') }}">
                         <span class="icon">
                             <ion-icon name="clipboard"></ion-icon>
